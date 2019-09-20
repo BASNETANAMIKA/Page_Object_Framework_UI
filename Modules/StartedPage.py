@@ -55,7 +55,6 @@ class StartedPage(PageObject):
             if tab_name == "Getting Started":
 
                 locator_name = locator_name.replace('{n}', 'getting-started')
-            #     locator_name = (self.selectors['tab_option'], n="getting-started")
             else:
                 locator_name = locator_name.replace('{n}', str(tab_name).lower())
 

@@ -10,7 +10,7 @@ class Utils(PageObject):
         """
         used to resolve locators from ObjectRepo/obj_repo_*.py
         """
-        file_path = os.path.join(os.getcwd(),"ObjectRepo",  file_name)
+        file_path = os.path.join(os.getcwd(), "ObjectRepo",  file_name)
         objfile = open(file_path, "r").read()
         split_file = objfile.split("selectors =")[1]
         # page_dict = {}
@@ -19,7 +19,10 @@ class Utils(PageObject):
         
         return selectors
 
-    def verify_element_visible(self,locator):
+    def verify_element_visible(self, locator):
+        """
+        verify if element is visible
+        """
         try:
             self.selib.element_should_be_visible(locator)
             return True
@@ -28,9 +31,12 @@ class Utils(PageObject):
             return False
 
     def search(self, search_text):
+        """
+        search for the text in the search text box
+        """
         self.selib.get_webelement('css=a.search-button.desktop-show >img').click()
         time.sleep(5)
-        self.selib.get_webelement('css=input#search-input').send_keys(search_text,Keys.RETURN)
+        self.selib.get_webelement('css=input#search-input').send_keys(search_text, Keys.RETURN)
         time.sleep(5)
-        log.info("here")
+        log.info("the search box text is done")
         return self
