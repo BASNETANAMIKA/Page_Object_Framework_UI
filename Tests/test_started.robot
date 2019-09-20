@@ -21,8 +21,8 @@ Library     GuidesPage.GuidesPage
 | | verify started page
 | | verify tab options | ${tab_options}
 | |
-| Verify that user can search and is redirected to the page
-| | [Documentation] | Verify that user can search and is redirected to the page
+| Verify that user can search in the search box
+| | [Documentation] | Verify that user can search in the search box
 | |
 | | [Setup]         | Go to page | StartedPage
 | | verify goto guides page
