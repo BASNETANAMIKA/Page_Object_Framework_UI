@@ -1,10 +1,10 @@
 # Page_Object_Framework_UI
 
-The robotframework-PageObjectLibrary has been used which is supported in python 3.
+The robotframework-PageObjectLibrary has been used for this project which is supported in python 3.
 
 Tests\test_started.robot is the main test suite.It contains 2 test cases:
 1. Verify details of getting started page
-2. Verify that user can search and is redirected to the page
+2. Verify that user can search.
 
 ##**Technology / Frameworks used:**
 
